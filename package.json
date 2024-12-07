@@ -4,6 +4,12 @@
   "description": "Sokyrecargas service",
   "private": true,
   "type": "module",
+  "main": "./src/main.js",
+  "module": "./dist/main.mjs",
+  "types": "./dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "api",
     "sokyrecargas",
