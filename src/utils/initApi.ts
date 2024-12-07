@@ -47,7 +47,6 @@ export function initApi(params: InitApiParams) {
     api.interceptors.response.use(
       errorHandler.onFulfilled,
       errorHandler.onRejected,
-      errorHandler.options,
     );
   }
 
