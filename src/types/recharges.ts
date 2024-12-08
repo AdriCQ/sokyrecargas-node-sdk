@@ -12,6 +12,9 @@ export interface IRecharge {
   recipient_name: string;
   created_at: string | Date | null;
   updated_at: string | Date | null;
+  is_stacked: boolean;
+  stacked_at: null | Date | string;
+  completed_at: null | Date | string;
 }
 
 export interface IRechargeFilterRequest extends IPaginationParams {
@@ -19,6 +22,7 @@ export interface IRechargeFilterRequest extends IPaginationParams {
   user_id?: number;
   status?: RechargeStatus;
   recipient?: string;
+  is_stacked?: boolean;
 }
 
 export enum RechargeStatus {
