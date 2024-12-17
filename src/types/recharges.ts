@@ -1,6 +1,7 @@
+import type { IOffer } from './offers';
 import type { IOperator } from './operators';
 import type { IUser } from './users';
-import { IPaginationParams } from '@/types/pagination';
+import type { IPaginationParams } from '@/types/pagination';
 
 export interface IRecharge {
   id: number;
@@ -15,6 +16,7 @@ export interface IRecharge {
   is_stacked: boolean;
   stacked_at: null | Date | string;
   completed_at: null | Date | string;
+  offer?: IOffer;
 }
 
 export interface IRechargeFilterRequest extends IPaginationParams {

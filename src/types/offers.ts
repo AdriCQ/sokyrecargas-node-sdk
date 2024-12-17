@@ -14,6 +14,7 @@ export interface IOffer {
   operator: IOperator;
   start_date: null | string | Date;
   end_date: null | string | Date;
+  is_stackable: boolean;
 }
 
 export interface IOfferCreateRequest
