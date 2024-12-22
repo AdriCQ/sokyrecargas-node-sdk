@@ -15,6 +15,7 @@ export interface IRecharge {
   updated_at: string | Date | null;
   is_stacked: boolean;
   stacked_at: null | Date | string;
+  retries: number | null;
   completed_at: null | Date | string;
   offer?: IOffer;
 }
