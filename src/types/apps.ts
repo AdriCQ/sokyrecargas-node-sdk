@@ -8,6 +8,8 @@ export interface IApp {
   available: boolean;
   user?: IUser;
   meta: IAppMeta[] | null;
+  version: number | null;
+  build: string | null;
 }
 
 type IAppMeta = {
