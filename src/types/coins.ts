@@ -13,6 +13,7 @@ export enum CoinTransactionType {
   TRANSFER = 'transfer',
   REFUND = 'refund',
   CONSUME = 'consume',
+  SET = 'set',
 }
 
 export interface ICoinTransaction {
