@@ -1,6 +1,7 @@
 import type { ICategory } from './categories';
 import { IOperator } from '@/types/operators';
 import { IPaginationParams } from '@/types/pagination';
+import { ICurrency } from './currencies';
 
 export interface IOffer {
   id: number;
@@ -11,9 +12,10 @@ export interface IOffer {
   prices: IOfferPrice[];
   available?: boolean;
   category: ICategory | null;
+  currency: ICurrency;
   operator: IOperator;
-  start_date: null | string | Date;
-  end_date: null | string | Date;
+  start_date: null | string;
+  end_date: null | string;
   is_stackable: boolean;
 }
 
