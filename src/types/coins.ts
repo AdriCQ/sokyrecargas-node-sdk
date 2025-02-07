@@ -31,18 +31,18 @@ export interface ICoinTransaction {
 export interface ICoinTransferenceRequest {
   to_user_email: string;
   amount: number;
-  comment?: string;
+  comment?: string | undefined;
 }
 
 export type ICoinTopUpRequest = {
   amount: number;
-  user_id?: number;
+  user_id?: number | undefined;
   currency: number;
-  completed?: boolean;
+  completed?: boolean | undefined;
 };
 
 export interface ICoinTransactionFilterRequest extends IPaginationParams {
-  from_user_id?: number;
-  to_user_id?: number;
-  status?: CoinTransactionStatus;
+  from_user_id?: number | undefined;
+  to_user_id?: number | undefined;
+  status?: CoinTransactionStatus | undefined;
 }

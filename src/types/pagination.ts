@@ -4,17 +4,17 @@
 export interface IPaginatedData<T> {
   data: T[];
   links: {
-    first?: string;
-    last?: string;
-    prev?: string;
-    next?: string;
+    first?: string | undefined;
+    last?: string | undefined;
+    prev?: string | undefined;
+    next?: string | undefined;
   };
   meta: {
-    current_page?: number;
-    from?: number;
-    path?: string;
-    per_page?: number;
-    to?: number;
+    current_page?: number | undefined;
+    from?: number | undefined;
+    path?: string | undefined;
+    per_page?: number | undefined;
+    to?: number | undefined;
   };
 }
 
@@ -22,6 +22,6 @@ export interface IPaginatedData<T> {
  * @interface IPaginationParams
  */
 export interface IPaginationParams {
-  page?: number;
-  paginate?: number;
+  page?: number | undefined;
+  paginate?: number | undefined;
 }

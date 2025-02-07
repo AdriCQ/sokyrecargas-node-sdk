@@ -5,7 +5,7 @@ export interface ICategory {
 
 export interface ICategoryCreateRequest {
   name: string;
-  parent_id?: number;
+  parent_id?: number | undefined;
 }
 
 export type ICategoryUpdateRequest = Partial<ICategoryCreateRequest>;

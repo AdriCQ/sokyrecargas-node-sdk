@@ -2,7 +2,7 @@ export interface ISiteBanner {
   id: number;
   title: string;
   image: string;
-  link?: string;
+  link?: string | undefined;
   description: string;
   active: boolean;
 }

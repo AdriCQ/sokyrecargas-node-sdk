@@ -1,5 +1,5 @@
 export interface IApiWrapper<T> {
   data: T;
-  message?: string;
-  error?: string;
+  message?: string | undefined;
+  error?: string | undefined;
 }

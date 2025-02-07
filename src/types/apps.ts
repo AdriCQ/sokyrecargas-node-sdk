@@ -6,7 +6,7 @@ export interface IApp {
   image: string | null;
   url: string | null;
   available: boolean;
-  user?: IUser;
+  user?: IUser | undefined;
   meta: IAppMeta[] | null;
   version: number | null;
   build: string | null;

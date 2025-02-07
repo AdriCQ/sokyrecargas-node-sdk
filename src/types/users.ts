@@ -23,10 +23,10 @@ export enum UserRole {
 }
 
 export interface IUserFilterRequest extends IPaginationParams {
-  email?: string;
-  name?: string;
-  phone?: string;
-  role?: UserRole;
+  email?: string | undefined;
+  name?: string | undefined;
+  phone?: string | undefined;
+  role?: UserRole | undefined;
 }
 
 /**
@@ -54,10 +54,10 @@ export interface IUserAuthResponse {
 }
 
 export interface IUserUpdateRequest {
-  name?: string;
-  verify_phone?: boolean;
-  verify_email?: boolean;
-  password?: string;
-  password_confirmation?: string;
-  coins?: number;
+  name?: string | undefined;
+  verify_phone?: boolean | undefined;
+  verify_email?: boolean | undefined;
+  password?: string | undefined;
+  password_confirmation?: string | undefined;
+  coins?: number | undefined;
 }

@@ -17,15 +17,15 @@ export interface IRecharge {
   stacked_at: null | Date | string;
   retries: number | null;
   completed_at: null | Date | string;
-  offer?: IOffer;
+  offer?: IOffer | undefined;
 }
 
 export interface IRechargeFilterRequest extends IPaginationParams {
-  operator_id?: number;
-  user_id?: number;
-  status?: RechargeStatus;
-  recipient?: string;
-  is_stacked?: boolean;
+  operator_id?: number | undefined;
+  user_id?: number | undefined;
+  status?: RechargeStatus | undefined;
+  recipient?: string | undefined;
+  is_stacked?: boolean | undefined;
 }
 
 export enum RechargeStatus {
@@ -42,7 +42,7 @@ export interface IRechargeCreate {
 }
 
 export interface IRechargeUpdateRequest {
-  status?: RechargeStatus.CANCELED;
-  recipient?: string;
-  recipient_name?: string;
+  status?: RechargeStatus.CANCELED | undefined;
+  recipient?: string | undefined;
+  recipient_name?: string | undefined;
 }
