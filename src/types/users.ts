@@ -27,6 +27,7 @@ export interface IUserFilterRequest extends IPaginationParams {
   name?: string | undefined;
   phone?: string | undefined;
   role?: UserRole | undefined;
+  search?: string | undefined;
 }
 
 /**
