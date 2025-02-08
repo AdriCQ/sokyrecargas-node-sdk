@@ -4,10 +4,13 @@ import type {
   IPaginatedData,
   IUser,
   IUserAuthResponse,
+  IUserDetails,
   IUserFilterRequest,
   IUserLoginRequest,
+  IUserMetadata,
   IUserRegisterRequest,
-  IUserUpdateRequest,
+  IUserResetPasswordRequest,
+  IUserUpdateProfileRequest,
 } from '@/types';
 
 export default function (api: AxiosInstance) {
@@ -36,12 +39,26 @@ export default function (api: AxiosInstance) {
        */
       register: (params: IUserRegisterRequest) =>
         api.post<IUserAuthResponse>(`${authUrl}/register`, params),
+      verifyEmail: (userId: number, token: string) =>
+        api.post(`${authUrl}/verify-email/${userId}/${token}`),
+      sendEmailVerification: () =>
+        api.post(`${authUrl}/email/verification-notification`),
+      forgotPassword: (email: string) =>
+        api.post(`${authUrl}/forgot-password`, { email }),
+      resetPassword: (params: IUserResetPasswordRequest) =>
+        api.post(`${authUrl}/reset-password`, params),
     },
-
-    list: (params?: IUserFilterRequest) =>
-      api.get<IPaginatedData<IUser>>(baseUrl, { params }),
-    show: (id: number) => api.get<IApiWrapper<IUser>>(`${baseUrl}/${id}`),
-    update: (id: number, params: IUserUpdateRequest) =>
-      api.patch<IApiWrapper<IUser>>(`${baseUrl}/${id}`, params),
+    admin: {
+      list: (params?: IUserFilterRequest) =>
+        api.get<IPaginatedData<IUser>>(baseUrl, { params }),
+      show: (id: number) =>
+        api.get<IApiWrapper<IUserDetails>>(`${baseUrl}/${id}`),
+      updateMetadata: (userId: number, params: Partial<IUserMetadata>) =>
+        api.patch(`${baseUrl}/${userId}/update-metadata`, params),
+    },
+    profile: {
+      update: (params: IUserUpdateProfileRequest) =>
+        api.patch<IApiWrapper<IUser>>(`${baseUrl}/update-profile`, params),
+    },
   };
 }

@@ -14,6 +14,28 @@ export interface IUser {
   role: UserRole;
 }
 
+export interface IUserMetadata {
+  birthday: string | null;
+  gender: 'm' | 'f' | 'x' | null;
+  telegram_chat_id: string | null;
+  country_code: string | null;
+  is_premium: boolean;
+  is_reseller: boolean;
+  is_banned: boolean;
+  banned_at: string | null;
+  banned_reason: string | null;
+  can_recharge: boolean;
+  can_recharge_another: boolean;
+  can_topup: boolean;
+  can_transfer: boolean;
+  can_withdraw: boolean;
+  observations: string | null;
+}
+
+export interface IUserDetails extends IUser {
+  metadata: IUserMetadata;
+}
+
 /**
  * UserRole
  */
@@ -54,11 +76,15 @@ export interface IUserAuthResponse {
   token: string;
 }
 
-export interface IUserUpdateRequest {
-  name?: string | undefined;
-  verify_phone?: boolean | undefined;
-  verify_email?: boolean | undefined;
-  password?: string | undefined;
-  password_confirmation?: string | undefined;
-  coins?: number | undefined;
+export interface IUserUpdateProfileRequest {
+  email: string | undefined;
+  phone: string | undefined;
+  name: string | undefined;
+}
+
+export interface IUserResetPasswordRequest {
+  email: string;
+  password: string;
+  password_confirmation: string;
+  token: string;
 }
