@@ -27,6 +27,7 @@ export interface IOfferCreateRequest
   category_id?: number;
   operator_code: string;
   currency_id: number;
+  image_custom?: string | undefined | null;
   image?: File | undefined;
   image_promo?: File;
   start_date: null | string;
