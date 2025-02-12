@@ -39,6 +39,7 @@ export type ICoinTopUpRequest = {
   user_id?: number | undefined;
   currency: number;
   completed?: boolean | undefined;
+  set?: boolean | undefined;
 };
 
 export interface ICoinTransactionFilterRequest extends IPaginationParams {
