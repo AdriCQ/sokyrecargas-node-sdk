@@ -11,6 +11,8 @@ import type {
   IUserRegisterRequest,
   IUserResetPasswordRequest,
   IUserUpdateProfileRequest,
+  IUserVerifyEmail,
+  IVerifyToken,
 } from '@/types';
 
 export default function (api: AxiosInstance) {
@@ -39,14 +41,16 @@ export default function (api: AxiosInstance) {
        */
       register: (params: IUserRegisterRequest) =>
         api.post<IUserAuthResponse>(`${authUrl}/register`, params),
-      verifyEmail: (userId: number, token: string) =>
-        api.post(`${authUrl}/verify-email/${userId}/${token}`),
+      verifyEmail: (params: IUserVerifyEmail) =>
+        api.post(`${authUrl}/verify-email`, params),
       sendEmailVerification: () =>
         api.post(`${authUrl}/email/verification-notification`),
       forgotPassword: (email: string) =>
         api.post(`${authUrl}/forgot-password`, { email }),
       resetPassword: (params: IUserResetPasswordRequest) =>
         api.post(`${authUrl}/reset-password`, params),
+      verifyToken: (params: IVerifyToken) =>
+        api.post(`${authUrl}/verify-token`, params),
     },
     admin: {
       list: (params?: IUserFilterRequest) =>

@@ -88,3 +88,14 @@ export interface IUserResetPasswordRequest {
   password_confirmation: string;
   token: string;
 }
+
+export interface IUserVerifyEmail {
+  user_id: number;
+  token: string;
+}
+
+export interface IVerifyToken {
+  email: string;
+  type: 'email_verification' | 'password_reset';
+  token: string;
+}
