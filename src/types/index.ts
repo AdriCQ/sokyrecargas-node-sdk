@@ -6,6 +6,7 @@ export * from './misc';
 export * from './offers';
 export * from './operators';
 export * from './pagination';
+export * from './providers';
 export * from './recharges';
 export * from './settings';
 export * from './stats';

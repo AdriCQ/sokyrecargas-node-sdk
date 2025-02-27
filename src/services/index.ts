@@ -4,6 +4,7 @@ export { default as CoinService } from './coins';
 export { default as CurrencyService } from './currencies';
 export { default as OfferService } from './offers';
 export { default as OperatorService } from './operators';
+export { default as ProviderService } from './providers';
 export { default as RechargesService } from './recharges';
 export { default as SettingsService } from './settings';
 export { default as StatsService } from './stats';

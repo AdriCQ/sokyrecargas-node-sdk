@@ -7,6 +7,7 @@ import {
   CurrencyService,
   OfferService,
   OperatorService,
+  ProviderService,
   RechargesService,
   SettingsService,
   StatsService,
@@ -25,6 +26,7 @@ function setup(_api?: AxiosInstance) {
     currency: CurrencyService(api),
     offer: OfferService(api),
     operator: OperatorService(api),
+    provider: ProviderService(api),
     recharge: RechargesService(api),
     settings: SettingsService(api),
     stats: StatsService(api),
@@ -45,6 +47,7 @@ export * from './types/misc';
 export * from './types/offers';
 export * from './types/operators';
 export * from './types/pagination';
+export * from './types/providers';
 export * from './types/recharges';
 export * from './types/settings';
 export * from './types/stats';

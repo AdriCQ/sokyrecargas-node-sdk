@@ -1,7 +1,8 @@
-import type { IOffer } from './offers';
-import type { IOperator } from './operators';
-import type { IUser } from './users';
+import type { IOffer } from '@/types/offers';
+import type { IOperator } from '@/types/operators';
 import type { IPaginationParams } from '@/types/pagination';
+import type { IProvider } from '@/types/providers';
+import type { IUser } from '@/types/users';
 
 export interface IRecharge {
   id: number;
@@ -18,6 +19,7 @@ export interface IRecharge {
   retries: number | null;
   completed_at: null | Date | string;
   offer?: IOffer | undefined;
+  provider?: IProvider | null | undefined;
 }
 
 export interface IRechargeFilterRequest extends IPaginationParams {
