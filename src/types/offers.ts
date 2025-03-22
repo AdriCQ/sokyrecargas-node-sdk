@@ -54,6 +54,7 @@ export type IOfferPrice = {
   label: string;
   value: number;
   value_private?: number;
+  value_reseller?: number;
 };
 
 export interface IOfferRecharge {
