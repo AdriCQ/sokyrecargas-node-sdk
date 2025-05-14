@@ -7,6 +7,7 @@ import type { IUser } from '@/types/users';
 export interface IRecharge {
   id: number;
   operator: IOperator;
+  price_label: string;
   user: IUser;
   status: RechargeStatus;
   amount: number;

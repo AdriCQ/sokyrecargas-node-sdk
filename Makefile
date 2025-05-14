@@ -17,11 +17,11 @@ format:
 
 .PHONY: unpublish
 unpublish:
-	@pnpm unpublish --force --registry https://dev.zumvida.com
+	@pnpm unpublish --force --registry https://verdaccio.sokyrecargas.com
 
 .PHONY: publish
 publish: build
-	@pnpm publish --no-git-checks --registry https://dev.zumvida.com
+	@pnpm publish --no-git-checks --registry https://verdaccio.sokyrecargas.com
 
 .PHONY: fresh-publish
 fresh-publish: build unpublish publish
