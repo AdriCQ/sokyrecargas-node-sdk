@@ -21,6 +21,7 @@ export interface IRecharge {
   completed_at: null | Date | string;
   offer?: IOffer | undefined;
   provider?: IProvider | null | undefined;
+  metadata?: IRechargeMetadata | null;
 }
 
 export interface IRechargeFilterRequest extends IPaginationParams {
@@ -48,4 +49,11 @@ export interface IRechargeUpdateRequest {
   status?: RechargeStatus.CANCELED | undefined;
   recipient?: string | undefined;
   recipient_name?: string | undefined;
+}
+
+export interface IRechargeMetadata {
+  agent: IUser | null;
+  telegram_chat_id: string | null;
+  telegram_message_id: string | null;
+  comments: string | null;
 }
