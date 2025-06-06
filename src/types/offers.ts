@@ -61,3 +61,12 @@ export interface IOfferRecharge {
   recipient: string;
   price_id: string;
 }
+
+export interface IOfferInput {
+  type: 'phone' | 'email';
+  label: string;
+  isRequired: boolean;
+}
+export interface IOfferMetadata {
+  inputs: IOfferInput[];
+}
