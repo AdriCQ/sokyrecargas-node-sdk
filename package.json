@@ -1,6 +1,6 @@
 {
   "name": "@adricq/soky",
-  "version": "3.2.2",
+  "version": "3.3.1",
   "description": "Sokyrecargas service",
   "main": "./dist/main.js",
   "module": "./dist/main.mjs",
@@ -13,7 +13,7 @@
     "sokyrecargas",
     "service"
   ],
-  "author": "adriancapote95@gmail.com",
+  "author": "sokyrecargas@gmail.com",
   "license": "MIT",
   "scripts": {
     "build": "tsup",

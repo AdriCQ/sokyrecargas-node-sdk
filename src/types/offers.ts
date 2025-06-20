@@ -52,9 +52,11 @@ export interface IOfferFilterRequest extends IPaginationParams {
 export type IOfferPrice = {
   id?: string | undefined;
   label: string;
-  value: number;
-  value_private?: number;
-  value_reseller?: number;
+  public: number;
+  private?: number;
+  reseller?: number;
+  operator_id?: number | null;
+  operator?: IOperator;
 };
 
 export interface IOfferRecharge {

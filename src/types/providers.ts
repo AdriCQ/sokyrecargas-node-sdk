@@ -4,4 +4,4 @@ export interface IProvider {
   type: string;
 }
 
-export type ProviderType = 'PON_TU_RECARGA' | 'AGENTS';
+export type ProviderType = 'PON_TU_RECARGA' | 'AGENTS' | 'SUENA_CUBA';
