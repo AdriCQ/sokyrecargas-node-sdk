@@ -58,7 +58,7 @@ export default function (api: AxiosInstance) {
       show: (id: number) =>
         api.get<IApiWrapper<IUserDetails>>(`${baseUrl}/${id}`),
       updateMetadata: (userId: number, params: Partial<IUserMetadata>) =>
-        api.patch(`${baseUrl}/${userId}/update-metadata`, params),
+        api.patch(`${baseUrl}/${userId}/metadata`, params),
     },
     profile: {
       update: (params: IUserUpdateProfileRequest) =>
