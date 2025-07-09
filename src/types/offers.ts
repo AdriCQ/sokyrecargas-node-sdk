@@ -19,6 +19,7 @@ export interface IOffer {
   end_date: null | string;
   is_stackable: boolean;
   provider?: IProvider | null | undefined;
+  metadata?: IOfferMetadata | null;
 }
 
 export interface IOfferCreateRequest
@@ -35,6 +36,7 @@ export interface IOfferCreateRequest
   image_promo?: File;
   start_date: null | string;
   end_date: null | string;
+  has_email: boolean;
 }
 
 export type IOfferUpdateRequest = Partial<IOfferCreateRequest>;
@@ -69,6 +71,7 @@ export interface IOfferInput {
   label: string;
   isRequired: boolean;
 }
+
 export interface IOfferMetadata {
   inputs: IOfferInput[];
 }
