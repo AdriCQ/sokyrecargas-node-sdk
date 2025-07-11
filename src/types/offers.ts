@@ -36,7 +36,7 @@ export interface IOfferCreateRequest
   image_promo?: File;
   start_date: null | string;
   end_date: null | string;
-  has_email: boolean;
+  has_email: boolean | null;
 }
 
 export type IOfferUpdateRequest = Partial<IOfferCreateRequest>;
@@ -74,4 +74,5 @@ export interface IOfferInput {
 
 export interface IOfferMetadata {
   inputs: IOfferInput[];
+  has_email: boolean;
 }

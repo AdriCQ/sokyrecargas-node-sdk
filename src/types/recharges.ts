@@ -12,6 +12,7 @@ export interface IRecharge {
   status: RechargeStatus;
   amount: number;
   recipient: string;
+  email: null | string;
   recipient_name: string;
   created_at: string | Date | null;
   updated_at: string | Date | null;
@@ -42,12 +43,15 @@ export interface IRechargeCreate {
   amount: number;
   operator_code: string;
   recipient: string;
+  email: string | null;
   recipient_name: string | null;
+  comments?: string | undefined;
 }
 
 export interface IRechargeUpdateRequest {
   status?: RechargeStatus.CANCELED | undefined;
   recipient?: string | undefined;
+  email?: string | null;
   recipient_name?: string | undefined;
 }
 
