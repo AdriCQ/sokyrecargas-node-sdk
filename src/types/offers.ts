@@ -64,6 +64,7 @@ export type IOfferPrice = {
 export interface IOfferRecharge {
   recipient: string;
   price_id: string;
+  email: string | null | undefined;
 }
 
 export interface IOfferInput {
