@@ -1,6 +1,6 @@
 {
   "name": "@adricq/soky",
-  "version": "3.5.0",
+  "version": "3.5.1",
   "description": "Sokyrecargas service",
   "main": "./dist/main.js",
   "module": "./dist/main.mjs",

@@ -1,5 +1,6 @@
-import type { IUser } from './users';
+import type { IUser } from '@/types/users';
 import { IPaginationParams } from '@/types/pagination';
+import { IPayment } from '@/types/payments';
 
 export enum CoinTransactionStatus {
   PENDING = 'pending',
@@ -24,6 +25,7 @@ export interface ICoinTransaction {
   type: CoinTransactionType;
   status: CoinTransactionStatus;
   comment: string | null;
+  payment: IPayment | null;
   created_at: string | Date;
   updated_at: string | Date | null;
 }
