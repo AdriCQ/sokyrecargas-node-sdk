@@ -1,6 +1,8 @@
 export interface IPayment {
   id: number;
   amount: number;
+  external_id: string;
+  external_url: string | null;
   status: PaymentStatus;
   historic: unknown[];
   created_at: string;
